@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:text="Web URl"
+        android:text="Web URl :"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextText2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -27,8 +27,8 @@
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="166dp"
+        android:layout_height="46dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="116dp"
         android:ems="10"
@@ -58,8 +58,8 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="202dp"
-        android:layout_height="40dp"
+        android:layout_width="165dp"
+        android:layout_height="41dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="112dp"
         android:ems="10"
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="220dp"
         android:text="Call Log"
         app:layout_constraintEnd_toStartOf="@+id/button7"
@@ -85,7 +85,7 @@
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="12dp"
         android:text="Call Log"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,20 +126,17 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="315dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
         android:text="Camera"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
-        app:layout_constraintVertical_bias="0.681" />
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="36dp"
         android:text="Alarm"
         app:layout_constraintBaseline_toBaselineOf="@+id/button10"
         app:layout_constraintStart_toStartOf="parent" />
@@ -148,8 +145,8 @@
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
         android:text="Alarm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button9" />
