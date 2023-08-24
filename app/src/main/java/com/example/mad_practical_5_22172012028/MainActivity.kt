@@ -15,34 +15,82 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val browse_Button: Button = findViewById(R.id.button_browse)
-        val editTextbrowser: EditText = findViewById(R.id.editTextText2)
-        browse_Button.setOnClickListener {
-            OpenUrl(editTextbrowser.text.toString())
+        val browsebutton:Button = findViewById(R.id.button_browse)
+        val cal:Button = findViewById(R.id.call)
+        val callog:Button = findViewById(R.id.calllog)
+        val gallery:Button = findViewById(R.id.gallery)
+        val camera:Button = findViewById(R.id.camera)
+        val alarm:Button = findViewById(R.id.alarm)
+
+        val editTextBrowser:EditText = findViewById(R.id.editTextText2)
+        val editTextCall:EditText = findViewById(R.id.editTextText)
+
+        browsebutton.setOnClickListener {
+            openbrowse(editTextBrowser.text.toString())
+        }
+
+        cal.setOnClickListener {
+            call(editTextCall.text.toString())
+        }
+        callog.setOnClickListener {
+            call_log()
+        }
+
+        gallery.setOnClickListener {
+            gallery()
+        }
+
+        camera.setOnClickListener {
+            camera()
+        }
+
+        alarm.setOnClickListener {
+            alarm()
+        }
+
+    }
+
+    fun openbrowse(s:String)
+    {
+        Intent(Intent.ACTION_VIEW, Uri.parse(s)).also {
+            startActivity(it)
         }
     }
-    fun OpenUrl(url:String)
+
+    fun call(n:String)
     {
-    Intent(Intent.ACTION_VIEW, Uri.parse(url)).also { startActivity(it) }
+        Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:$n")).also {
+            startActivity(it)
+        }
     }
-    fun phone(phone:String)
+
+    fun call_log()
     {
-        Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel,$phone")).also { startActivity(it) }
+        Intent(Intent.ACTION_VIEW).setType(CallLog.Calls.CONTENT_TYPE).also {
+            startActivity(it)
+        }
     }
-    fun callLog()
+
+    fun gallery()
     {
-        Intent(Intent.ACTION_VIEW).setType(CallLog.Calls.CONTENT_TYPE).also { startActivity(it) }
+        Intent(Intent.ACTION_VIEW).setType("image/*").also {
+            startActivity(it)
+        }
     }
-    fun gallery(gallery:String)
-    {
-    Intent(Intent.ACTION_VIEW).setType("imgae/*").also { startActivity(it) }
-    }
+
     fun camera()
     {
-    Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { startActivity(it) }
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {
+            startActivity(it)
+        }
     }
+
     fun alarm()
     {
-    Intent(AlarmClock.ACTION_SHOW_ALARMS).also { startActivity(it) }
+        Intent(AlarmClock.ACTION_SHOW_ALARMS).also {
+            startActivity(it)
+        }
     }
+
+
 }
