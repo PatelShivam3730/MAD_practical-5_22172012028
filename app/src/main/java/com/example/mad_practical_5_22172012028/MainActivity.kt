@@ -15,21 +15,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val browsebutton:Button = findViewById(R.id.button_browse)
-        val cal:Button = findViewById(R.id.call)
-        val callog:Button = findViewById(R.id.calllog)
-        val gallery:Button = findViewById(R.id.gallery)
-        val camera:Button = findViewById(R.id.camera)
-        val alarm:Button = findViewById(R.id.alarm)
+        val browsebutton:Button = findViewById(R.id.button)
+        val call:Button = findViewById(R.id.button3)
+        val callog:Button = findViewById(R.id.button5)
+        val gallery:Button = findViewById(R.id.button6)
+        val camera:Button = findViewById(R.id.button7)
+        val alarm:Button = findViewById(R.id.button8)
 
-        val editTextBrowser:EditText = findViewById(R.id.editTextText2)
-        val editTextCall:EditText = findViewById(R.id.editTextText)
+        val editTextBrowser:EditText = findViewById(R.id.btext)
+        val editTextCall:EditText = findViewById(R.id.ctext)
 
         browsebutton.setOnClickListener {
             openbrowse(editTextBrowser.text.toString())
         }
 
-        cal.setOnClickListener {
+        call.setOnClickListener {
             call(editTextCall.text.toString())
         }
         callog.setOnClickListener {
