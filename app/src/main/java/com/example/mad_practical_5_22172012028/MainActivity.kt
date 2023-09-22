@@ -9,27 +9,26 @@ import android.provider.CallLog
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
-import java.net.URL
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val browsebutton:Button = findViewById(R.id.button)
-        val call:Button = findViewById(R.id.button3)
-        val callog:Button = findViewById(R.id.button5)
-        val gallery:Button = findViewById(R.id.button6)
-        val camera:Button = findViewById(R.id.button7)
-        val alarm:Button = findViewById(R.id.button8)
+        val browsebutton:Button = findViewById(R.id.button_browse)
+        val cal:Button = findViewById(R.id.call)
+        val callog:Button = findViewById(R.id.calllog)
+        val gallery:Button = findViewById(R.id.gallery)
+        val camera:Button = findViewById(R.id.camera)
+        val alarm:Button = findViewById(R.id.alarm)
 
-        val editTextBrowser:EditText = findViewById(R.id.btext)
-        val editTextCall:EditText = findViewById(R.id.ctext)
+        val editTextBrowser:EditText = findViewById(R.id.editTextText2)
+        val editTextCall:EditText = findViewById(R.id.editTextText)
 
         browsebutton.setOnClickListener {
             openbrowse(editTextBrowser.text.toString())
         }
 
-        call.setOnClickListener {
+        cal.setOnClickListener {
             call(editTextCall.text.toString())
         }
         callog.setOnClickListener {
